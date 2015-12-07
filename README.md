@@ -8,9 +8,6 @@ A ruby miodule wrapping the GNU copmmand-line utility unrtf
 ##
 ```ruby
 require 'path/to/rtf_parse.rb'
-```
-
-```ruby
 RtfParse.to_text(rtf_text_or_file_path)
 ```
 
