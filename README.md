@@ -14,7 +14,6 @@ require 'path/to/rtf_parse/lib/rtf_parse.rb'
 To convert to text:
 
 ```ruby
-require 'path/to/rtf_parse.rb'
 RtfParse.to_text(rtf_text_or_file_path)
 ```
 
