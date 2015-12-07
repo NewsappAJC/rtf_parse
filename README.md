@@ -7,6 +7,10 @@ A ruby miodule wrapping the GNU copmmand-line utility unrtf
 
 ## Use
 
+```ruby
+require 'path/to/rtf_parse/lib/rtf_parse.rb'
+```
+
 To convert to text:
 
 ```ruby
