@@ -9,7 +9,8 @@ module RtfParse
     command = "unrtf -P #{config_path} -t text --nopict --quiet"
     rtf = _get_source_content(source)
 
-    return _parse(rtf, command)
+    text = _parse(rtf, command)
+    return _clean_header(text)
   end
 
   def self.to_html(source)
@@ -38,7 +39,7 @@ module RtfParse
     end
     raise @err if @err != ""
 
-    return @text == "" ? nil : @text # return nil if no valid text is parsed from source
+    return @text
   end
 
   def self._get_source_content(source)
@@ -51,7 +52,16 @@ module RtfParse
     end
   end
 
+  def self._clean_header(text)
+    text.gsub!(/###  Translation.+(\n)?/, '')
+    text.gsub!(/### font table .+\n\n/, '')
+    text.gsub!(/-+\n\n/, '')
+    return text
+  end
+
   class << self
     private :_parse
+    private :_get_source_content
+    private :_clean_header
   end
 end
