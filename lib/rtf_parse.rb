@@ -1,3 +1,4 @@
+require "rtf_filter/version"
 require "open4"
 
 module RtfParse

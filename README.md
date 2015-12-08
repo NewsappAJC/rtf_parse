@@ -1,23 +1,28 @@
 # RtfParse
-A ruby miodule wrapping the GNU copmmand-line utility unrtf
+A ruby miodule wrapping unrtf. The GNU copmmand-line utility, unrtf, uses `.config` file to determine the output format for the parsed RTF. Output can be customized by modifying these files, which you'll find in the config directory of this gem. The `html.config` file includes a complete list of formatting tags.
 
 ## Dependencies
 - [unrtf](https://www.gnu.org/software/unrtf/)
-- [Open4](https://github.com/ahoward/open4)
+
+## Installation
+
+```ruby
+gem install rtf_parse
+```
 
 ## Use
 
 ```ruby
-require 'path/to/rtf_parse/lib/rtf_parse.rb'
+require 'rtf_parse'
 ```
 
-To convert to text:
+To convert RTF to text:
 
 ```ruby
 RtfParse.to_text(rtf_text_or_file_path)
 ```
 
-To convert to HTML:
+To convert RTF to HTML:
 
 ```ruby
 RtfParse.to_html(rtf_text_or_file_path)
