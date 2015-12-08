@@ -7,7 +7,7 @@ A ruby miodule wrapping unrtf. The GNU copmmand-line utility, unrtf, uses `.conf
 ## Installation
 First install unrtf:
 - Mac: `brew install unrtf`
-- Ubuntu: `apt-get install unrtf'
+- Ubuntu: `apt-get install unrtf`
 - Windows: [find installer here](http://gnuwin32.sourceforge.net/packages/unrtf.htm)
 
 Then install the gem:
